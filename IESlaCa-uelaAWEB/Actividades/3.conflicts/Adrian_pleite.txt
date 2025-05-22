@@ -1,0 +1,23 @@
+¿Qué es un conflicto?
+Un conflicto en Git ocurre cuando dos ramas han realizado cambios incompatibles en las mismas líneas de un archivo o en archivos que no se pueden combinar automáticamente. Git no puede decidir cuál cambio conservar, así que necesita que tú lo resuelvas manualmente.
+¿Cuándo ocurre un conflicto?
+Un conflicto ocurre generalmente cuando:
+Dos ramas modifican la misma línea de un archivo.
+Un archivo es modificado en una rama y eliminado en otra.
+Git no puede fusionar automáticamente los cambios durante un merge, rebase o cherry-pick.
+¿Es bueno o malo un conflicto?
+No es malo, es una parte normal del trabajo colaborativo.
+Indica que hay diferencias que deben resolverse manualmente para asegurar que el código final sea coherente.
+Es bueno en el sentido de que previene errores automáticos y te obliga a revisar los cambios importantes.
+¿Se puede evitar un conflicto?
+No se pueden evitar completamente, pero sí se pueden reducir o minimizar.
+¿Cómo se puede evitar un conflicto?
+Aquí tienes algunas formas de minimizar los conflictos:
+1.	Comunicación clara en el equipo para evitar trabajar en los mismos archivos o funciones.
+2.	Dividir tareas de forma que cada desarrollador trabaje en diferentes áreas del proyecto.
+3.	Hacer pull frecuentemente de la rama principal (ej. main) para mantener tu rama actualizada:
+bash
+CopiarEditar
+git pull origin main
+4.	Realizar merge o rebase frecuentemente, no dejar ramas desactualizadas por mucho tiempo.
+5.	Hacer cambios pequeños y enfocados, en lugar de grandes modificaciones en muchos archivos.
