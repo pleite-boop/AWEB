@@ -1,0 +1,64 @@
+¿Qué es un branch?
+Un branch (rama) en Git es una línea de desarrollo independiente que permite trabajar en nuevas funcionalidades, correcciones de errores u otras tareas sin afectar la rama principal (usualmente main o master).
+¿Por qué pueden ser útiles los branches?
+Los branches son útiles porque:
+Permiten el desarrollo paralelo de características.
+Aíslan el trabajo en curso para no afectar el código estable.
+Facilitan la colaboración entre desarrolladores.
+Permiten experimentar sin comprometer el proyecto principal.
+¿Cómo se crea una branch?
+bash
+CopiarEditar
+git branch nombre-de-la-rama
+Esto crea una nueva rama, pero no cambia a ella automáticamente.
+¿Cómo se cambia a una branch?
+bash
+CopiarEditar
+git checkout nombre-de-la-rama
+con versiones recientes de Git (más intuitivo):
+bash
+CopiarEditar
+git switch nombre-de-la-rama
+¿Cómo se elimina una branch?
+Eliminar una rama local:
+bash
+CopiarEditar
+git branch -d nombre-de-la-rama
+Eliminar una rama remota:
+bash
+CopiarEditar
+git push origin --delete nombre-de-la-rama
+¿Cómo se crea una branch y se cambia a ella en un solo paso?
+bash
+CopiarEditar
+git checkout -b nombre-de-la-rama
+bash
+CopiarEditar
+git switch -c nombre-de-la-rama
+¿Qué es un merge?
+Un merge es la operación que integra los cambios de una rama en otra, normalmente para incorporar el trabajo de una rama secundaria (como feature-x) en la rama principal (main).
+¿Cómo se realiza un merge?
+Cambia a la rama donde quieres aplicar el merge 
+bash
+CopiarEditar
+git checkout main
+Ejecuta el merge:
+bash
+CopiarEditar
+git merge nombre-de-la-rama
+¿Qué es un tag?
+Un tag (etiqueta) es una referencia fija a un punto específico del historial de commits, comúnmente usada para marcar versiones importantes o lanzamientos (ej. v1.0.0).
+¿Cómo se crea un tag?
+Tag ligero (solo marca el commit):
+bash
+CopiarEditar
+git tag v1.0.0
+Tag anotado (con mensaje y metadatos):
+bash
+CopiarEditar
+git tag -a v1.0.0 -m "Versión 1.0.0"
+Para subir un tag al repositorio remoto:
+bash
+CopiarEditar
+git push origin v1.0.0
+
